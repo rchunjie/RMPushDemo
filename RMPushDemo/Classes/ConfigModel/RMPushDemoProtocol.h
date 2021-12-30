@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy)   NSString *bundleExecutable;
 
 /// 选中回调 如果定义 在这构建数据自己进行处理
-@property (nonatomic,copy,nullable)   void(^selectCallback)(id<RMPushDemoProtocol>);
+@property (nonatomic,copy,nullable)   void(^selectCallback)(id<RMPushDemoProtocol>,UIViewController *);
 
 /// 配置项目
 /// @param name 继承 TJBaseController 控制器文件名 不可空
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
                       params:(NSDictionary *)params
                     showName:(NSString *)showName
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^ _Nullable)(id <RMPushDemoProtocol>))callBack;
+                    callBack:(void(^ _Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack;
 
 /// 配置项目
 /// @param name 继承 TJBaseController 控制器文件名 不可空
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
                     showName:(NSString *)showName
             bundleExecutable:(NSString *)bundleExecutable
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^ _Nullable)(id <RMPushDemoProtocol>))callBack;
+                    callBack:(void(^ _Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack;
 
 @end
 

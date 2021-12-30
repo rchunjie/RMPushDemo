@@ -19,7 +19,7 @@
                       params:(NSDictionary *)params
                     showName:(NSString *)showName
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^_Nullable)(id <RMPushDemoProtocol>))callBack{
+                    callBack:(void(^_Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack{
     RMPushDemoModel *item = [[RMPushDemoModel alloc] init];
     item.vcsName = name;
     item.params = params;
@@ -40,7 +40,7 @@
                     showName:(NSString *)showName
             bundleExecutable:(NSString *)bundleExecutable
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^ _Nullable)(id <RMPushDemoProtocol>))callBack{
+                    callBack:(void(^ _Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack{
     RMPushDemoModel *item = [RMPushDemoModel configVCName:name params:params showName:showName showSubTitle:showSubTitle callBack:callBack];
     item.bundleExecutable = bundleExecutable;
     return item;

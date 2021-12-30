@@ -72,7 +72,7 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
     id <RMPushDemoProtocol>item = self.dataSource[indexPath.row];
     if (item.showName.length <= 0) return;
     if (item.selectCallback != nil) {
-        item.selectCallback(item);
+        item.selectCallback(item,self);
         return;
     }
     Class vcsClass = NSClassFromString(item.vcsName);
