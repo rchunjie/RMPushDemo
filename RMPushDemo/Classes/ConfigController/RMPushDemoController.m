@@ -8,7 +8,6 @@
 
 #import "RMPushDemoController.h"
 #import <Masonry/Masonry.h>
-#import "RMPushDemoModel+cellStyle.h"
 #import <objc/message.h>
 #import "UIView+RMCategory.h"
 
@@ -44,20 +43,26 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 - (void)setupData{
     [self.tableView reloadData];
 }
-
-- (void)setDataSource:(NSArray<RMPushDemoModel *> *)dataSource{
+- (void)setDataSource:(NSArray<id<RMPushDemoProtocol>> *)dataSource{
     _dataSource = dataSource;
     [self setupData];
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UITableViewCell_Identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:UITableViewCell_Identifier];
     }
-    RMPushDemoModel *item = self.dataSource[indexPath.row];
-    cell.textLabel.attributedText = [item showCellTitle];
-    cell.detailTextLabel.attributedText = [item showCellDetailsTitle];
+    id <RMPushDemoProtocol>item = self.dataSource[indexPath.row];
+    if ([item respondsToSelector:@selector(showCellTitle)]) {
+        cell.textLabel.attributedText = [item showCellTitle];
+    }else{
+        cell.textLabel.text = item.showName.length > 0 ? item.showName:item.showSubTitle;
+    }
+    if ([item respondsToSelector:@selector(showCellDetailsTitle)]) {
+        cell.detailTextLabel.attributedText = [item showCellDetailsTitle];
+    }else{
+        cell.detailTextLabel.text = item.showSubTitle;
+    }
     return cell;
 }
 

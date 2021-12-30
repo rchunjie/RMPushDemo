@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 选中回调 如果定义 在这构建数据自己进行处理
 @property (nonatomic,copy,nullable)   void(^selectCallback)(id<RMPushDemoProtocol>,UIViewController *);
+/// title样式
+- (NSAttributedString *)showCellTitle;
+/// 详情样式
+- (NSAttributedString *)showCellDetailsTitle;
 
 /// 配置项目
 /// @param name 继承 TJBaseController 控制器文件名 不可空

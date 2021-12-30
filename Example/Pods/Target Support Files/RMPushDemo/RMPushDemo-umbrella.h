@@ -12,7 +12,6 @@
 
 #import "RMPushDemoController.h"
 #import "RMMacroDefinition.h"
-#import "RMPushDemoModel+cellStyle.h"
 #import "RMPushDemoModel.h"
 #import "RMPushDemoProtocol.h"
 #import "RMPushDemo.h"
