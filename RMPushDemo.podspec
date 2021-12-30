@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'RMPushDemo'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RMPushDemo.'
+s.name             = 'RMPushDemo'
+s.version          = '0.1.0'
+s.summary          = 'A short description of RMPushDemo.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,26 +17,27 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+s.description      = <<-DESC
 TODO: Add long description of the pod here.
-                       DESC
+DESC
 
-  s.homepage         = 'https://github.com/rencj/RMPushDemo'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'rencj' => 'rencj@yangche51.com' }
-  s.source           = { :git => 'https://github.com/rencj/RMPushDemo.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+s.homepage         = 'https://github.com/rencj/RMPushDemo'
+# s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'rencj' => 'rencj@yangche51.com' }
+s.source           = { :git => 'https://github.com/rencj/RMPushDemo.git', :tag => s.version.to_s }
+# s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '9.0'
 
-  s.source_files = 'RMPushDemo/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RMPushDemo' => ['RMPushDemo/Assets/*.png']
-  # }
+s.source_files = 'RMPushDemo/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+# s.resource_bundles = {
+#   'RMPushDemo' => ['RMPushDemo/Assets/*.png']
+# }
+
+# s.public_header_files = 'Pod/Classes/**/*.h'
+s.frameworks = 'UIKit','Foundation'
+# s.dependency 'AFNetworking', '~> 2.3'
+s.dependency 'Masonry'
 end

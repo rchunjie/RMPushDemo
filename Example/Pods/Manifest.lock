@@ -1,0 +1,31 @@
+PODS:
+  - Expecta (1.0.6)
+  - Masonry (1.1.0)
+  - RMPushDemo (0.1.0):
+    - Masonry
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - RMPushDemo (from `../`)
+  - Specta
+
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - Masonry
+    - Specta
+
+EXTERNAL SOURCES:
+  RMPushDemo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  RMPushDemo: 7d4ede65e5ca3018908d44f56989e350888fa451
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: 3140b9f21e236a2e45aa9139efbeba256ae92c6f
+
+COCOAPODS: 1.11.2

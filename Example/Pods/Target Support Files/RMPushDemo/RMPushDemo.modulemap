@@ -1,0 +1,6 @@
+framework module RMPushDemo {
+  umbrella header "RMPushDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

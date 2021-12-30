@@ -1,0 +1,31 @@
+{
+  "name": "RMPushDemo",
+  "version": "0.1.0",
+  "summary": "A short description of RMPushDemo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rencj/RMPushDemo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rencj": "rencj@yangche51.com"
+  },
+  "source": {
+    "git": "https://github.com/rencj/RMPushDemo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RMPushDemo/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  }
+}
