@@ -7,7 +7,6 @@
 //
 
 #import "RMPushDemoController.h"
-#import "RMPushDemoModel.h"
 #import <Masonry/Masonry.h>
 #import "RMPushDemoModel+cellStyle.h"
 #import <objc/message.h>
@@ -72,7 +71,7 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    RMPushDemoModel *item = self.dataSource[indexPath.row];
+    id <RMPushDemoProtocol>item = self.dataSource[indexPath.row];
     if (item.showName.length <= 0) return;
     if (item.selectCallback != nil) {
         item.selectCallback(item);
