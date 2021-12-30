@@ -14,13 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)    NSString *vcsName;
 /// 参数
 @property(nonatomic,strong)  NSDictionary *params;
-
 /// 拓展参数
 @property(nonatomic,strong)  id expand;
-
 /// 展示名
 @property (nonatomic,copy)   NSString *showName;
-
 /// 展示详情
 @property (nonatomic,copy)   NSString *showSubTitle;
 /// swift 必须实现
