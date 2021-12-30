@@ -35,9 +35,7 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
         _tableView;
     })];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(@0);
-        make.top.mas_equalTo(@(self.view.navBarHighly));
-        make.bottom.mas_equalTo(self.mas_bottomLayoutGuideTop);
+        make.edges.mas_equalTo(@0);
     }];
 }
 
@@ -73,11 +71,11 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     RMPushDemoModel *item = self.dataSource[indexPath.row];
-    if (item.showName.length <= 0) return;
     if (item.selectCallback != nil) {
         item.selectCallback(item,self);
         return;
     }
+    if (item.showName.length <= 0) return;
     Class vcsClass = NSClassFromString(item.vcsName);
     UIViewController * vc = [[vcsClass alloc] init];
     if (item.params.allKeys.count > 0) {
