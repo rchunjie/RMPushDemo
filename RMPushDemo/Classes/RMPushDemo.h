@@ -8,7 +8,9 @@
 #if __has_include(<RMPushDemo/RMPushDemo.h>)
 #import <RMPushDemo/RMPushDemoController.h>
 #import <RMPushDemo/RMPushDemoProtocol.h>
+#import <RMPushDemo/RMPushDemoModel.h>
 #else
 #import "RMPushDemoController.h"
 #import "RMPushDemoProtocol.h"
+#import "RMPushDemoModel.h"
 #endif
