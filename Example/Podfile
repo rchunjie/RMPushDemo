@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'RMPushDemo_Example' do
+  pod 'RMPushDemo', :path => '../'
+
+  target 'RMPushDemo_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end
