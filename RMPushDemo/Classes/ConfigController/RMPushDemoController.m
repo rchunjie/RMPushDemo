@@ -17,7 +17,6 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 @interface RMPushDemoController ()<UITableViewDelegate,UITableViewDataSource>
 /// 显示
 @property(nonatomic,strong)  UITableView *tableView;
-
 @end
 
 @implementation RMPushDemoController
@@ -29,7 +28,6 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 }
 /// 布局
 - (void)setupView{
-    self.navigationItem.title = @"VC跳转";
     [self.view addSubview:({
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
         _tableView.delegate = self;
@@ -83,7 +81,11 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
         [vc setValuesForKeysWithDictionary:item.params];
     }
     if (!vc) return;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)viewDidLayoutSubviews{
