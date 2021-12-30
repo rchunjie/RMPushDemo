@@ -13,7 +13,6 @@
 #import "RMPushDemoController.h"
 #import "RMMacroDefinition.h"
 #import "RMPushDemoModel.h"
-#import "RMPushDemoProtocol.h"
 #import "RMPushDemo.h"
 #import "UIView+RMCategory.h"
 

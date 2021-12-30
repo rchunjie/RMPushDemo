@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kTJMakeSureString(str) ([str isKindOfClass:[NSString class]]? (NSString *)str : \
+#define kRMMakeSureString(str) ([str isKindOfClass:[NSString class]]? (NSString *)str : \
 ([str respondsToSelector:@selector(stringValue)] ? [(id)str  stringValue] : @""))
 
-#define kTJFont(size)        [UIFont systemFontOfSize:size]
+#define kRMFont(size)        [UIFont systemFontOfSize:size]

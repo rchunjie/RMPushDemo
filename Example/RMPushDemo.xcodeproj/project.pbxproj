@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		347E3D7B277D802F00429977 /* RMPushDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = 347E3D7A277D802F00429977 /* RMPushDatas.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,7 +39,9 @@
 
 /* Begin PBXFileReference section */
 		25D4E0033E77E65F4F3068D3 /* Pods-RMPushDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMPushDemo_Example.debug.xcconfig"; path = "Target Support Files/Pods-RMPushDemo_Example/Pods-RMPushDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		585D7FA879E80698A410AEBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		347E3D79277D802F00429977 /* RMPushDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPushDatas.h; sourceTree = "<group>"; };
+		347E3D7A277D802F00429977 /* RMPushDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPushDatas.m; sourceTree = "<group>"; };
+		585D7FA879E80698A410AEBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5C9B7C98DF738EED9886258B /* Pods-RMPushDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMPushDemo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RMPushDemo_Tests/Pods-RMPushDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RMPushDemo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMPushDemo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,12 +64,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6FD98A664214457802F3D3B1 /* Pods-RMPushDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMPushDemo_Example.release.xcconfig"; path = "Target Support Files/Pods-RMPushDemo_Example/Pods-RMPushDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		73E1608A40E76F13EF615A3E /* RMPushDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RMPushDemo.podspec; path = ../RMPushDemo.podspec; sourceTree = "<group>"; };
+		73E1608A40E76F13EF615A3E /* RMPushDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RMPushDemo.podspec; path = ../RMPushDemo.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E1E53B8746F696ABBBBE696 /* Pods_RMPushDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMPushDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926F2803B43AF672AD55EABE /* Pods-RMPushDemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMPushDemo_Tests.release.xcconfig"; path = "Target Support Files/Pods-RMPushDemo_Tests/Pods-RMPushDemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C57FF58E73EBFD9D318395F1 /* Pods_RMPushDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMPushDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF51E779095C3921C2345AD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EF51E779095C3921C2345AD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +106,6 @@
 				5C9B7C98DF738EED9886258B /* Pods-RMPushDemo_Tests.debug.xcconfig */,
 				926F2803B43AF672AD55EABE /* Pods-RMPushDemo_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +146,8 @@
 		6003F593195388D20070C39A /* Example for RMPushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				347E3D79277D802F00429977 /* RMPushDatas.h */,
+				347E3D7A277D802F00429977 /* RMPushDatas.m */,
 				6003F59C195388D20070C39A /* RMAppDelegate.h */,
 				6003F59D195388D20070C39A /* RMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -259,6 +263,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -387,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347E3D7B277D802F00429977 /* RMPushDatas.m in Sources */,
 				6003F59E195388D20070C39A /* RMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* RMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

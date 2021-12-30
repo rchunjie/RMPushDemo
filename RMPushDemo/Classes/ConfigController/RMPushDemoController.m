@@ -1,5 +1,5 @@
 //
-//  TJPushDemoController.m
+//  RMPushDemoController.m
 //  TJInsuranceAcceptance_Example
 //
 //  Created by 任春节 on 2021/11/9.
@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import <objc/message.h>
 #import "UIView+RMCategory.h"
+#import "RMPushDemoModel.h"
 
 NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 
@@ -43,23 +44,20 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 - (void)setupData{
     [self.tableView reloadData];
 }
-- (void)setDataSource:(NSArray<id<RMPushDemoProtocol>> *)dataSource{
-    _dataSource = dataSource;
-    [self setupData];
-}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UITableViewCell_Identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:UITableViewCell_Identifier];
     }
-    id <RMPushDemoProtocol>item = self.dataSource[indexPath.row];
-    if ([item respondsToSelector:@selector(showCellTitle)]) {
-        cell.textLabel.attributedText = [item showCellTitle];
+    RMPushDemoModel *item = self.dataSource[indexPath.row];
+    if ([item respondsToSelector:@selector(getCellTitleStyle)]) {
+        cell.textLabel.attributedText = [item getCellTitleStyle];
     }else{
         cell.textLabel.text = item.showName.length > 0 ? item.showName:item.showSubTitle;
     }
-    if ([item respondsToSelector:@selector(showCellDetailsTitle)]) {
-        cell.detailTextLabel.attributedText = [item showCellDetailsTitle];
+    if ([item respondsToSelector:@selector(getCellDetailsTitle)]) {
+        cell.detailTextLabel.attributedText = [item getCellDetailsTitle];
     }else{
         cell.detailTextLabel.text = item.showSubTitle;
     }
@@ -74,7 +72,7 @@ NSString * UITableViewCell_Identifier = @"UITableViewCell_Identifier";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    id <RMPushDemoProtocol>item = self.dataSource[indexPath.row];
+    RMPushDemoModel *item = self.dataSource[indexPath.row];
     if (item.showName.length <= 0) return;
     if (item.selectCallback != nil) {
         item.selectCallback(item,self);

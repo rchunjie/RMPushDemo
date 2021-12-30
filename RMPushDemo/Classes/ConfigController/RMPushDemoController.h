@@ -1,5 +1,5 @@
 //
-//  TJPushDemoController.h
+//  RMPushDemoController.h
 //  TJInsuranceAcceptance_Example
 //
 //  Created by 任春节 on 2021/11/9.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RMPushDemoProtocol.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class RMPushDemoModel;
 @interface RMPushDemoController : UIViewController
 /// 数据源
-@property(nonatomic,strong)  NSArray <id<RMPushDemoProtocol>>*dataSource;
+@property(nonatomic,strong)  NSArray <RMPushDemoModel *>*dataSource;
 @end
 
 NS_ASSUME_NONNULL_END

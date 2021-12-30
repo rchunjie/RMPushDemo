@@ -20,7 +20,7 @@
                       params:(NSDictionary *)params
                     showName:(NSString *)showName
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^_Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack{
+                    callBack:(void(^_Nullable)(RMPushDemoModel *,UIViewController *))callBack{
     RMPushDemoModel *item = [[RMPushDemoModel alloc] init];
     item.vcsName = name;
     item.params = params;
@@ -41,7 +41,7 @@
                     showName:(NSString *)showName
             bundleExecutable:(NSString *)bundleExecutable
                 showSubTitle:(NSString *)showSubTitle
-                    callBack:(void(^ _Nullable)(id<RMPushDemoProtocol>,UIViewController *))callBack{
+                    callBack:(void(^ _Nullable)(RMPushDemoModel *,UIViewController *))callBack{
     RMPushDemoModel *item = [RMPushDemoModel configVCName:name params:params showName:showName showSubTitle:showSubTitle callBack:callBack];
     item.bundleExecutable = bundleExecutable;
     return item;
@@ -49,39 +49,25 @@
 
 - (NSString *)vcsName{
     if (self.bundleExecutable.length > 0) {
-        return [NSString stringWithFormat:@"%@.%@",self.bundleExecutable,self.vcsName];
+        return [NSString stringWithFormat:@"%@.%@",_bundleExecutable,_vcsName];
     }
     return self.vcsName;
 }
 
-- (NSAttributedString *)showCellTitle{
-    NSString *title = kTJMakeSureString(self.showName).length > 0?self.showName:self.vcsName;
+- (NSAttributedString *)getCellTitleStyle{
+    NSString *title = kRMMakeSureString(_showName).length > 0?_showName:_vcsName;
     return [[NSAttributedString alloc] initWithString:title attributes:@{
         NSFontAttributeName:[UIFont boldSystemFontOfSize:14],
         NSForegroundColorAttributeName:UIColor.blackColor
     }];
 }
 
-- (NSAttributedString *)showCellDetailsTitle{
-    NSString *details = kTJMakeSureString(self.showSubTitle).length > 0 ?self.showSubTitle:@"";
+- (NSAttributedString *)getCellDetailsTitle{
+    NSString *details = kRMMakeSureString(_showSubTitle).length > 0 ?_showSubTitle:@"";
     return [[NSAttributedString alloc] initWithString:details attributes:@{
         NSFontAttributeName:[UIFont systemFontOfSize:12],
         NSForegroundColorAttributeName:UIColor.grayColor
     }];
 }
-
-@synthesize bundleExecutable;
-
-@synthesize expand;
-
-@synthesize params;
-
-@synthesize selectCallback;
-
-@synthesize vcsName;
-
-@synthesize showSubTitle;
-
-@synthesize showName;
 
 @end
